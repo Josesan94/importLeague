@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import {
   TypeOrmModule,
   TypeOrmModuleAsyncOptions,
@@ -47,12 +45,7 @@ const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
     TypeOrmModule.forFeature([Team, Player, Coach, Competition]),
     HttpModule,
   ],
-  providers: [AppService, ImportLeagueService, PlayerService, TeamService],
-  controllers: [
-    AppController,
-    ImportLeagueController,
-    PlayerController,
-    TeamController,
-  ],
+  providers: [ImportLeagueService, PlayerService, TeamService],
+  controllers: [ImportLeagueController, PlayerController, TeamController],
 })
 export class AppModule {}

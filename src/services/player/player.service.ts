@@ -20,7 +20,6 @@ export class PlayerService {
       where: { code: leagueCode },
       relations: ['teams'],
     });
-    console.log(competition);
     if (!competition) {
       throw new NotFoundException(`League with code ${leagueCode} not found.`);
     }
