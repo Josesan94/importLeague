@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: my-nestjs-backend
+    env: node
+    buildCommand: "yarn build"
+    startCommand: "yarn start:prod"
